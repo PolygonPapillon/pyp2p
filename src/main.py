@@ -1,4 +1,5 @@
 import argparse
+import os
 
 '''Argument parsing'''
 parser = argparse.ArgumentParser()
@@ -12,5 +13,7 @@ args = parser.parse_args()
 
 
 if __name__ == '__main__':
-
-    pass
+    if os.name == 'nt':
+        print("Hello Windows")
+    else:
+        print("Hello Unix")
